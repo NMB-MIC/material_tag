@@ -1,0 +1,37 @@
+@media all {
+  .page-break {
+    display: none;
+  }
+}
+
+@media print {
+  html,
+  body {
+    height: initial !important;
+    width: initial !important;
+    overflow: initial !important;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+@media print {
+  .page-break {
+    /* margin-top: 1rem; */
+    display: block;
+    page-break-before: always;
+  }
+}
+
+@page {
+  /* size: 45mm 10mm; */
+  overflow: hidden;
+  height: 0;
+  margin-left: 0mm;
+}
+
+@media print {
+  @page {
+    size: portrait;
+    margin: 0;
+  }
+}
